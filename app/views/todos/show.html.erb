@@ -1,0 +1,13 @@
+<div class="pages">
+    <h1  id="heading-two">Showing a new Todo</h1>
+
+<p class="todo-name">
+    Todo: <p class="todo-description"><%= @todo.name %></p>
+</p>
+<p class="todo-name">
+    What Todo: <p class="todo-description"><%=  @todo.description %></p>
+</p>
+
+<button class="link-btn"><%= link_to 'Edit this Todo', edit_todo_path(@todo) %></button> |
+<button class="link-btn"><%= link_to 'Back To Todo', todos_path %></button>
+</div>

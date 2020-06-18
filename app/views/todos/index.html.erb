@@ -1,0 +1,26 @@
+<div class="home">
+    <h2>This is your list of things to do.</h2>
+    <h2> Better get too it!</h2>
+
+   <p>
+   <button class="new-todo-btn"> <%= link_to 'Create Something Todo', new_todo_path %></button>
+   </p> <br>
+
+<div class="table-div">
+    <table>
+    <tr>
+        <th>Todo</th>
+        <th>What Todo</th>
+    </tr>
+    <% @todos.each do |todo| %>
+    <tr>
+        <td><%= todo.name %></td>
+        <td><%= todo.description %></td>
+        <td><button class="index-btn"><%= link_to 'Edit', edit_todo_path(todo) %></button></td>
+        <td><button class="index-btn"><%= link_to 'Show', todo_path(todo) %></button></td>
+        <td><button class="index-btn"><%= link_to 'Delete', todo_path(todo), method: :delete, data: {confirm: 'Are you sure?'} %></button></td>
+    </tr>
+    <% end %>
+</table>
+</div>
+</div>
